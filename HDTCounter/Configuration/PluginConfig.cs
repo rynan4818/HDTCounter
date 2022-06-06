@@ -1,5 +1,4 @@
-﻿/*
-using System.Runtime.CompilerServices;
+﻿using System.Runtime.CompilerServices;
 using IPA.Config.Stores;
 
 [assembly: InternalsVisibleTo(GeneratedStore.AssemblyVisibilityTarget)]
@@ -8,7 +7,13 @@ namespace HDTCounter.Configuration
     internal class PluginConfig
     {
         public static PluginConfig Instance { get; set; }
-        public virtual int IntValue { get; set; } = 42; // Must be 'virtual' if you want BSIPA to detect a value change and save the config automatically.
+        public virtual int DecimalPrecision { get; set; } = 3;
+        public virtual bool EnableLabel { get; set; } = true;
+        public virtual float LabelFontSize { get; set; } = 3f;
+        public virtual float FigureFontSize { get; set; } = 4f;
+        public virtual float OffsetX { get; set; } = 0f;
+        public virtual float OffsetY { get; set; } = 0f;
+        public virtual float OffsetZ { get; set; } = 0f;
 
         /// <summary>
         /// This is called whenever BSIPA reads the config from disk (including when file changes are detected).
@@ -35,4 +40,3 @@ namespace HDTCounter.Configuration
         }
     }
 }
-*/

@@ -2,11 +2,35 @@
   "$schema": "https://raw.githubusercontent.com/bsmg/BSIPA-MetadataFileSchema/master/Schema.json",
   "id": "HDTCounter",
   "name": "HDTCounter",
-  "author": "",
-  "version": "0.0.1",
-  "description": "",
-  "gameVersion": "1.18.3",
+  "author": "Rynan",
+  "version": "1.0.0",
+  "description": "Add a counter head distance travelled",
+  "gameVersion": "1.20.0",
   "dependsOn": {
-    "BSIPA": "^4.2.0"
+    "BSIPA": "^4.2.2",
+    "BeatSaberMarkupLanguage": "^1.6.3",
+    "SiraUtil": "^3.0.5",
+    "HeadDistanceTravelled": "^0.0.3",
+    "Counters+": "^2.2.7"
+  },
+  "loadAfter": [
+    "Counters+"
+  ],
+  "features": {
+    "CountersPlus.CustomCounter": {
+      "Name": "HDT Counter",
+      "Description": "Shows the head distance travelled",
+      "CounterLocation": "HDTCounter.HDTCounter",
+      "ConfigDefaults": {
+        "Enabled": true,
+        "Position": "BelowCombo",
+        "Distance": 0
+      },
+      "BSML": {
+        "Resource": "HDTCounter.settings.bsml",
+        "Host": "HDTCounter.SettingsHandler",
+        "Icon": "HDTCounter.Images.icon.png"
+      }
+    }
   }
 }
