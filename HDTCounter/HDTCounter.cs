@@ -1,6 +1,5 @@
 ﻿using HeadDistanceTravelled;
 using CountersPlus.Counters.Custom;
-using CountersPlus.Counters.Interfaces;
 using System.Globalization;
 using TMPro;
 using HDTCounter.Configuration;
