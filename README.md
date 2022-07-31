@@ -23,10 +23,20 @@
 
 # 使用方法
 modをインストールすると、COUNTERS+の設定画面にHDT Counterが追加されますので、表示位置や詳細設定をして使用してください。
+
+BP(Bottach Point)の表示はデフォルトでは無効になっていますので、COUNTERS+の設定でONにしてください。
+
+また、BP係数はデフォルトでx10、BPのFailedのしきい値は5mになっています。必要に応じて変更してください。
+
+
+
 HDT Counterの設定値は以下の通りです。
 |項目|説明|
 |:---|:---|
-|DecimalPrecision|小数点以下を表示する桁数|
+|DecimalPrecision|HDTの小数点以下を表示する桁数|
+|EnableBp|BPの表示|
+|BpFactor|BPの係数|
+|BpFailureThreshold|BPのFailedしきい値|
 |EnableLabel|ラベル(Head Distance Travelled)の表示|
 |LabelFontSize|ラベルのフォントサイズ|
 |FigureFontSize|カウンターのフォントサイズ|
@@ -35,3 +45,11 @@ HDT Counterの設定値は以下の通りです。
 |OffsetZ|カウンターのZ軸オフセット|
 
 数値を細かく設定したい場合は、`UserData\HDTCounter.json`を直接編集してください。
+
+以下の設定はUIないため、直接設定ファイルを変更してください。
+
+|項目|説明|
+|:---|:---|
+|BpDecimalPrecision|BPの小数点以下を表示する桁数|
+|LabelText|ラベルの表示文字|
+

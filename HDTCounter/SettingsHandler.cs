@@ -15,6 +15,36 @@ namespace HDTCounter
             }
         }
 
+        [UIValue("EnableBp")]
+        public bool EnableBp
+        {
+            get => PluginConfig.Instance.EnableBp;
+            set
+            {
+                PluginConfig.Instance.EnableBp = value;
+            }
+        }
+
+        [UIValue("BpFactor")]
+        public float BpFactor
+        {
+            get => PluginConfig.Instance.BpFactor;
+            set
+            {
+                PluginConfig.Instance.BpFactor = value;
+            }
+        }
+
+        [UIValue("BpFailureThreshold")]
+        public float BpFailureThreshold
+        {
+            get => PluginConfig.Instance.BpFailureThreshold;
+            set
+            {
+                PluginConfig.Instance.BpFailureThreshold = value;
+            }
+        }
+
         [UIValue("EnableLabel")]
         public bool EnableLabel
         {
