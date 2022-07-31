@@ -29,7 +29,7 @@ namespace HDTCounter
         public override void CounterInit()
         {
             this._controller.OnDistanceChanged += this.OnDistanceChanged;
-            if (this._relativeScoreAndImmediateRankCounter)
+            if (PluginConfig.Instance.EnableBp && this._relativeScoreAndImmediateRankCounter)
                 this._relativeScoreAndImmediateRankCounter.relativeScoreOrImmediateRankDidChangeEvent += this.RelativeScoreAndImmediateRankCounter_relativeScoreOrImmediateRankDidChangeEvent;
             if (PluginConfig.Instance.EnableLabel)
             {
@@ -58,7 +58,7 @@ namespace HDTCounter
         public override void CounterDestroy()
         {
             this._controller.OnDistanceChanged -= this.OnDistanceChanged;
-            if (this._relativeScoreAndImmediateRankCounter)
+            if (PluginConfig.Instance.EnableBp && this._relativeScoreAndImmediateRankCounter)
                 this._relativeScoreAndImmediateRankCounter.relativeScoreOrImmediateRankDidChangeEvent -= this.RelativeScoreAndImmediateRankCounter_relativeScoreOrImmediateRankDidChangeEvent;
         }
         private void OnDistanceChanged(float distance, in Vector3 hmdPosition, in Quaternion hmdRotation)
@@ -86,7 +86,7 @@ namespace HDTCounter
 
         private void BpUpdate()
         {
-            if (!this._relativeScoreAndImmediateRankCounter)
+            if (!(PluginConfig.Instance.EnableBp && this._relativeScoreAndImmediateRankCounter))
                 return;
             var bp = (_relativeScore * 100f) - (_distance * PluginConfig.Instance.BpFactor);
             var failed = false;
