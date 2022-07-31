@@ -1,6 +1,6 @@
 # HDTCounter
 
-このBeatSaberプラグインは、デンパ時計さんの製作された[HeadDistanceTravelled](https://github.com/denpadokei/HeadDistanceTravelled)のHMD移動距離[m]を表示する[CountersPlus](https://github.com/Caeden117/CountersPlus)用のカスタムカウンターです。
+このBeatSaberプラグインは、デンパ時計さんの製作された[HeadDistanceTravelled](https://github.com/denpadokei/HeadDistanceTravelled)のHMD移動距離[m]を表示する[CountersPlus](https://github.com/Caeden117/CountersPlus)用のカスタムカウンターです。また、yasさん考案のBP(Bottach Point)の表示にも対応しています。
 
 ![image](https://user-images.githubusercontent.com/14249877/172158178-c825414b-6bc0-41b4-8ea5-7851f0afc8dd.png)
 
@@ -28,7 +28,7 @@ BP(Bottach Point)の表示はデフォルトでは無効になっていますの
 
 また、BP係数はデフォルトでx10、BPのFailedのしきい値は5mになっています。必要に応じて変更してください。
 
-
+![image](https://user-images.githubusercontent.com/14249877/182019554-6bfae235-3b0f-406e-97c1-26f4dff8e6e6.png)
 
 HDT Counterの設定値は以下の通りです。
 |項目|説明|
