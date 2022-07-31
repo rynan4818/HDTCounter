@@ -2,7 +2,7 @@
 
 このBeatSaberプラグインは、デンパ時計さんの製作された[HeadDistanceTravelled](https://github.com/denpadokei/HeadDistanceTravelled)のHMD移動距離[m]を表示する[CountersPlus](https://github.com/Caeden117/CountersPlus)用のカスタムカウンターです。また、yasさん考案のBP(Bottach Point)の表示にも対応しています。
 
-![image](https://user-images.githubusercontent.com/14249877/182019842-efbbc3bc-dfaf-4100-85f5-60c4c68cb2c5.png)
+![image](https://user-images.githubusercontent.com/14249877/182020587-15c190f8-aed5-471a-b457-e8ef44fb28e8.png)
 
 # インストール方法
 1. [HeadDistanceTravelled](https://github.com/denpadokei/HeadDistanceTravelled)をインストールして動作するか確認します。
