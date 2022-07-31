@@ -3,7 +3,7 @@
   "id": "HDTCounter",
   "name": "HDTCounter",
   "author": "Rynan",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Add a counter head distance travelled",
   "gameVersion": "1.20.0",
   "dependsOn": {

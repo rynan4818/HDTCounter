@@ -34,7 +34,10 @@ namespace HDTCounter
             if (PluginConfig.Instance.EnableLabel)
             {
                 var label = CanvasUtility.CreateTextFromSettings(Settings, new Vector3(x, y, z));
-                label.text = PluginConfig.Instance.LabelText;
+                if (PluginConfig.Instance.EnableBp && this._relativeScoreAndImmediateRankCounter)
+                    label.text = $"{PluginConfig.Instance.LabelText} (x{PluginConfig.Instance.BpFactor.ToString("F0", CultureInfo.InvariantCulture)} {PluginConfig.Instance.BpFailureThreshold.ToString("F1", CultureInfo.InvariantCulture)}m)";
+                else
+                    label.text = PluginConfig.Instance.LabelText;
                 label.fontSize = PluginConfig.Instance.LabelFontSize;
             }
             _counterHDT = CanvasUtility.CreateTextFromSettings(Settings, new Vector3(x, y - 0.2f, z));

@@ -1,5 +1,6 @@
 ﻿using BeatSaberMarkupLanguage.Attributes;
 using HDTCounter.Configuration;
+using System.Globalization;
 
 namespace HDTCounter
 {
@@ -103,6 +104,18 @@ namespace HDTCounter
             {
                 PluginConfig.Instance.OffsetZ = value;
             }
+        }
+
+        [UIAction("BpFactorFormatter")]
+        private string BpFactorFormatter(float value)
+        {
+            return $"x {value.ToString("F0", CultureInfo.InvariantCulture)}";
+        }
+
+        [UIAction("BpFailureThresholdFormatter")]
+        private string BpFailureThresholdFormatter(float value)
+        {
+            return $"{value.ToString("F1", CultureInfo.InvariantCulture)} m";
         }
     }
 }

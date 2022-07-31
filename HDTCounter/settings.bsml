@@ -2,8 +2,8 @@
   <text text='*If you want to adujust the values more accurately, do via json' align='Center' font-size='4' color='grey'></text>
   <increment-setting text="HDT Decimal Precision" value="DecimalPrecision" integer-only="true" min="1" max="5" increment="1" apply-on-change="true"></increment-setting>
   <checkbox-setting text="Enable Bottach Point" value="EnableBp"  apply-on-change="true"></checkbox-setting>
-  <increment-setting text="BP Factor" value="BpFactor"  increment="1" min="1" apply-on-change="true"></increment-setting>
-  <increment-setting text="BP Failure Threshold" value="BpFailureThreshold"  increment="0.1" min="0" apply-on-change="true"></increment-setting>
+  <increment-setting text="BP Factor" value="BpFactor"  increment="1" min="1" formatter="BpFactorFormatter" apply-on-change="true"></increment-setting>
+  <increment-setting text="BP Failure Threshold" value="BpFailureThreshold"  increment="0.1" min="0" formatter="BpFailureThresholdFormatter" apply-on-change="true"></increment-setting>
   <checkbox-setting text="Enable Label" value="EnableLabel"  apply-on-change="true"></checkbox-setting>
   <increment-setting text="Lable Font Size" value="LabelFontSize"  min="0" increment="1" apply-on-change="true"></increment-setting>
   <increment-setting text="Figure Font Size" value="FigureFontSize"  min="0" increment="1" apply-on-change="true"></increment-setting>
