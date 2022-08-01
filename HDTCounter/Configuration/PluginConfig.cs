@@ -19,6 +19,7 @@ namespace HDTCounter.Configuration
         public virtual float BpFailureThreshold { get; set; } = 5f;
         public virtual int BpDecimalPrecision { get; set; } = 2;
         public virtual string LabelText { get; set; } = "Head Distance Travelled";
+        public virtual float BpOnOffsetY { get; set; } = 0f;
 
         /// <summary>
         /// This is called whenever BSIPA reads the config from disk (including when file changes are detected).

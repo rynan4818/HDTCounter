@@ -106,6 +106,16 @@ namespace HDTCounter
             }
         }
 
+        [UIValue("BpOnOffsetY")]
+        public float BpOnOffsetY
+        {
+            get => PluginConfig.Instance.BpOnOffsetY;
+            set
+            {
+                PluginConfig.Instance.BpOnOffsetY = value;
+            }
+        }
+
         [UIAction("BpFactorFormatter")]
         private string BpFactorFormatter(float value)
         {

@@ -2,6 +2,8 @@
 using IPA.Config;
 using IPA.Config.Stores;
 using IPALogger = IPA.Logging.Logger;
+using SiraUtil.Zenject;
+using HDTCounter.Installer;
 
 namespace HDTCounter
 {
@@ -18,13 +20,14 @@ namespace HDTCounter
         /// [Init] methods that use a Constructor or called before regular methods like InitWithConfig.
         /// Only use [Init] with one Constructor.
         /// </summary>
-        public void Init(IPALogger logger, Config conf)
+        public void Init(IPALogger logger, Config conf, Zenjector zenjector)
         {
             Instance = this;
             Log = logger;
             Log.Info("HDTCounter initialized.");
             Configuration.PluginConfig.Instance = conf.Generated<Configuration.PluginConfig>();
             Log.Debug("Config loaded");
+            zenjector.Install<HDTCounterMenuInstaller>(Location.Menu);
         }
 
         [OnStart]

@@ -57,6 +57,11 @@
       <Private>False</Private>
       <SpecificVersion>False</SpecificVersion>
     </Reference>
+    <Reference Include="SiraUtil">
+      <HintPath>$(BeatSaberDir)\Plugins\SiraUtil.dll</HintPath>
+      <Private>False</Private>
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -120,10 +125,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HDTCounter.cs" />
+    <Compile Include="Installer\HDTCounterMenuInstaller.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Configuration\PluginConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SettingsHandler.cs" />
+    <Compile Include="Views\SettingTabViewController.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="manifest.json" />
@@ -132,6 +139,9 @@
     <None Include="Directory.Build.props" Condition="Exists('Directory.Build.props')" />
     <None Include="HDTCounter.csproj.user" Condition="Exists('HDTCounter.csproj.user')" />
     <EmbeddedResource Include="settings.bsml" />
+    <EmbeddedResource Include="Views\SettingTabViewController.bsml">
+      <DependentUpon>SettingTabViewController.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="BeatSaberModdingTools.Tasks">

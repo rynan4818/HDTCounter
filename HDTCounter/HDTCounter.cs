@@ -30,7 +30,10 @@ namespace HDTCounter
         {
             this._controller.OnDistanceChanged += this.OnDistanceChanged;
             if (PluginConfig.Instance.EnableBp && this._relativeScoreAndImmediateRankCounter)
+            {
                 this._relativeScoreAndImmediateRankCounter.relativeScoreOrImmediateRankDidChangeEvent += this.RelativeScoreAndImmediateRankCounter_relativeScoreOrImmediateRankDidChangeEvent;
+                y += PluginConfig.Instance.BpOnOffsetY;
+            }
             if (PluginConfig.Instance.EnableLabel)
             {
                 var label = CanvasUtility.CreateTextFromSettings(Settings, new Vector3(x, y, z));

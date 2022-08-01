@@ -43,6 +43,7 @@ HDT Counterの設定値は以下の通りです。
 |OffsetX|カウンターのX軸オフセット|
 |OffsetY|カウンターのY軸オフセット|
 |OffsetZ|カウンターのZ軸オフセット|
+|BpOnOffsetY|BP表示時のY軸オフセット|
 
 数値を細かく設定したい場合は、`UserData\HDTCounter.json`を直接編集してください。
 

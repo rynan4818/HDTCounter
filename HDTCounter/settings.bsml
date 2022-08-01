@@ -10,4 +10,5 @@
   <increment-setting text="Offset X" value="OffsetX"  increment="0.1" apply-on-change="true"></increment-setting>
   <increment-setting text="Offset Y" value="OffsetY"  increment="0.1" apply-on-change="true"></increment-setting>
   <increment-setting text="Offset Z" value="OffsetZ"  increment="0.1" apply-on-change="true"></increment-setting>
+  <increment-setting text="BP ON Offset Y" value="BpOnOffsetY"  increment="0.1" apply-on-change="true"></increment-setting>
 </vertical>
