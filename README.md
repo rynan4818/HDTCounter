@@ -24,11 +24,12 @@
 # 使用方法
 modをインストールすると、COUNTERS+の設定画面にHDT Counterが追加されますので、表示位置や詳細設定をして使用してください。
 
-BP(Bottach Point)の表示はデフォルトでは無効になっていますので、COUNTERS+の設定でONにしてください。
+BP(Bottach Point)の表示はデフォルトでは無効になっていますので、COUNTERS+の設定もしくは、ゲームプレイのMOD設定でONにしてください。
 
 また、BP係数はデフォルトでx10、BPのFailedのしきい値は5mになっています。必要に応じて変更してください。
 
 ![image](https://user-images.githubusercontent.com/14249877/182019554-6bfae235-3b0f-406e-97c1-26f4dff8e6e6.png)
+![image](https://user-images.githubusercontent.com/14249877/182142759-57a05909-7543-4d04-bd0a-19f721e806fe.png)
 
 HDT Counterの設定値は以下の通りです。
 |項目|説明|
