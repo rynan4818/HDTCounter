@@ -28,7 +28,12 @@ namespace HDTCounter.Views
             get => PluginConfig.Instance.BpFactor;
             set
             {
+                if (PluginConfig.Instance.BpFactor.Equals(value))
+                    return;
+                if (value < 1f)
+                    value = 1f;
                 PluginConfig.Instance.BpFactor = value;
+                NotifyPropertyChanged();
             }
         }
 
@@ -54,6 +59,17 @@ namespace HDTCounter.Views
             return $"{value.ToString("F1", CultureInfo.InvariantCulture)} m";
         }
 
+        [UIAction("FactorMinus10")]
+        private void FactorMinus10()
+        {
+            this.BpFactor -= 10f;
+        }
+
+        [UIAction("FactorPlus10")]
+        private void FactorPlus10()
+        {
+            this.BpFactor += 10f;
+        }
         protected override void OnDestroy()
         {
             GameplaySetup.instance.RemoveTab(TabName);
