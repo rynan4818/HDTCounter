@@ -67,7 +67,10 @@ namespace HDTCounter
         private void OnDistanceChanged(float distance, in Vector3 hmdPosition, in Quaternion hmdRotation)
         {
             _distance = distance;
-            _counterHDT.text = FormatHDT(distance);
+            string color = "blue";
+            if (hmdPosition.x > 0.02f || hmdPosition.x < -0.02f)
+                color = "red";
+            _counterHDT.text = $"{FormatHDT(distance)} <size=50%><color={color}>X:{hmdPosition.x.ToString("F3")} Z:{hmdPosition.z.ToString("F3")}";
             BpUpdate();
         }
 
