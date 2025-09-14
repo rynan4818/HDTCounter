@@ -3,15 +3,15 @@
   "id": "HDTCounter",
   "name": "HDTCounter",
   "author": "Rynan",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Add a counter head distance travelled",
-  "gameVersion": "1.20.0",
+  "gameVersion": "1.37.4",
   "dependsOn": {
-    "BSIPA": "^4.2.2",
-    "BeatSaberMarkupLanguage": "^1.6.3",
-    "SiraUtil": "^3.0.5",
-    "HeadDistanceTravelled": ">=0.0.2",
-    "Counters+": "^2.2.7"
+    "BSIPA": "^4.3.5",
+    "BeatSaberMarkupLanguage": "^1.12.0",
+    "SiraUtil": "^3.1.12",
+    "HeadDistanceTravelled": ">=1.0.0",
+    "Counters+": "^2.3.10"
   },
   "loadAfter": [
     "Counters+"
