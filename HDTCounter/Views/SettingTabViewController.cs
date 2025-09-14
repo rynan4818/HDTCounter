@@ -12,6 +12,13 @@ namespace HDTCounter.Views
     {
         public const string TabName = "HDT Counter";
         public string ResourceName => string.Join(".", GetType().Namespace, GetType().Name);
+        private GameplaySetup _gameplaySetup;
+        [Inject]
+        private void Constractor(GameplaySetup gameplaySetup)
+        {
+            this._gameplaySetup = gameplaySetup;
+        }
+
         [UIValue("EnableBp")]
         public bool EnableBp
         {
@@ -72,13 +79,13 @@ namespace HDTCounter.Views
         }
         protected override void OnDestroy()
         {
-            GameplaySetup.instance.RemoveTab(TabName);
+            this._gameplaySetup.RemoveTab(TabName);
             base.OnDestroy();
         }
 
         public void Initialize()
         {
-            GameplaySetup.instance.AddTab(TabName, this.ResourceName, this);
+            this._gameplaySetup.AddTab(TabName, this.ResourceName, this);
         }
     }
 }
